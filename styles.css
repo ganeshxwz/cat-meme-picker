@@ -65,4 +65,14 @@ h1 {
     text-align: center;
     margin:  auto;
     padding: 5px;
+    
+    
+}
+
+
+.highlighted{
+    accent-color: rgb(184, 20, 47);
+    font-weight: bolder;
+    color: rgb(184, 20, 47);
+    
 }
