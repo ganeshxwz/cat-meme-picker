@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Ole&display=swap");
+
+body {
+  margin: 0;
+  font-family: monospace;
+}
+
+.cat-img {
+  width: 110px;
+  height: auto;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-size: xx-large;
+}
+
+h2 {
+  margin-top: 2px;
+  font-size: xx-large;
+}
+
+.head-container {
+  font-family: "Ole", cursive;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  background-color: pink;
+  padding: 10px;
+}
+
+h1 {
+  font-size: x-large;
+  margin: 10px;
+  text-align: center;
+}
+
+#animated-check {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+#checkbox {
+  accent-color: pink;
+}
+
+#get-img-btn {
+  height: 40px;
+  width: 200px;
+  font-size: x-large;
+  padding: 20px 40px 50px 40px;
+  display: block;
+  margin: 20px auto;
+  background-color: pink;
+  border: 0px ;
+  border-radius: 40px;
+
+}
