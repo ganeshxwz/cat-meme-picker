@@ -58,3 +58,11 @@ h1 {
   border-radius: 40px;
 
 }
+
+.radios-div{
+    border: 1px solid black;
+    width: 300px;
+    text-align: center;
+    margin:  auto;
+    padding: 5px;
+}
