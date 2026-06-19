@@ -54,25 +54,65 @@ h1 {
   display: block;
   margin: 20px auto;
   background-color: pink;
-  border: 0px ;
+  border: 0px;
   border-radius: 40px;
-
 }
 
-.radios-div{
-    border: 1px solid black;
-    width: 300px;
-    text-align: center;
-    margin:  auto;
-    padding: 5px;
-    
-    
+.radios-div {
+  border: 1px solid black;
+  width: 300px;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+}
+
+.highlighted {
+  accent-color: rgb(184, 20, 47);
+  font-weight: bolder;
+  color: rgb(184, 20, 47);
+}
+
+#modal {
+  display: none;
+  height: 70%;
+  width: 70%;
+  background-color: rgb(246, 191, 209);
+  position: fixed;
+  top: 15%;
+  left: 15%;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+#modal-inner {
+  position: relative;
+ 
+  
+}
+
+.inner-img {
+  max-width: 270px;
+  max-height: 300px;
+  border-radius: 5px;
+margin-left: 10%;
+margin-top: 30%;
+margin-right: 10%;
+ 
+}
+
+.x {
+  position: absolute;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: xx-large;
+  background-color: inherit;
+  border: none;
+  display: flex;
+  margin-left: 87%;
+  margin-top: 5px;
+}
+
+.x:hover {
+  color: red;
 }
 
 
-.highlighted{
-    accent-color: rgb(184, 20, 47);
-    font-weight: bolder;
-    color: rgb(184, 20, 47);
-    
-}

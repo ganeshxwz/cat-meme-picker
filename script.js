@@ -2,18 +2,48 @@ import { catsData } from "./data.js";
 
 const radioEl = document.getElementById('radios-element')
 const getImgBtn = document.getElementById('get-img-btn')
-const checkBox = document.getElementById('checkbox')
+const gifOnly = document.getElementById('gif-only')
+
+const modal = document.getElementById('modal')
+const modalInner = document.getElementById('modal-inner')
+const xBtn = document.querySelector('.x')
 
 
-//  continue from here 
-// const isGif = checkBox.checked
 
-// getImgBtn.addEventListener('click', getcatimages)
+getImgBtn.addEventListener("click", renderCat)
 
-// function getcatimages(){
+function getMatchingCatsArray(){
+    if(document.querySelector('input[type="radio"]:checked')){
+        const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
+        const isGif = gifOnly.checked
+        const matchingArray = catsData.filter(function(cats){
+            if(isGif){
+            return  cats.emotionTags.includes(selectedEmotion) && cats.isGif
+            }else {
+            return cats.emotionTags.includes(selectedEmotion)}
+        })
+   return matchingArray
 
-// }
+    }
+}
 
+function getSingleCat(){
+    const matchingcat = getMatchingCatsArray()
+    if (matchingcat.length === 1){
+        return matchingcat[0]
+    }else{
+        let random = Math.floor(Math.random()* matchingcat.length)
+       return matchingcat[random]
+    }
+}
+
+
+function renderCat(){
+    let cat = getSingleCat()
+    console.log(cat)
+    modal.style.display = "flex"
+    modalInner.innerHTML = `<img class="inner-img" src="./images/${cat.image}" alt="${cat.alt}">`
+}
 
 
 radioEl.addEventListener("change", gethighlighted)
@@ -60,6 +90,12 @@ function renderEmotionArray(){
     radioEl.innerHTML = radiohtml
 }
 
+
+
 renderEmotionArray()
 
-console.log(getCatsEmotionArray(catsData))
+
+
+xBtn.addEventListener("click",function(){
+    modal.style.display = "none"
+})
