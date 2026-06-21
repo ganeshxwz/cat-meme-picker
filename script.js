@@ -8,7 +8,13 @@ const modal = document.getElementById('modal')
 const modalInner = document.getElementById('modal-inner')
 const xBtn = document.querySelector('.x')
 
+// additional close feature
 
+// document.addEventListener("click",function(e){
+//     if(!e.target.id === modal){
+//        modal.style.display = "none"
+//     }
+// })
 
 getImgBtn.addEventListener("click", renderCat)
 
@@ -96,6 +102,6 @@ renderEmotionArray()
 
 
 
-xBtn.addEventListener("click",function(){
+xBtn.addEventListener("click",function close(){
     modal.style.display = "none"
 })
